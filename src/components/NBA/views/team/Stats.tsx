@@ -2,9 +2,9 @@
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ContainerBox from "@/components/ContainerBox";
-import FullTeamStats from "@/components/FullTeamStats";
+// import FullTeamStats from "@/components/FullTeamStats";
 import Articles from "@/components/Articles";
-import TeamUserSelection from "@/components/TeamUserSelection";
+// import TeamUserSelection from "@/components/TeamUserSelection";
 import LeagueContainerBox from "@/components/LeagueContainerBox";
 
 export default function Stats({ data }: { data: any }) {
@@ -13,7 +13,7 @@ export default function Stats({ data }: { data: any }) {
   const desktopView = () => (
     <>
       <div className="basis-3/4">
-        <FullTeamStats data={data} />
+        {/* <FullTeamStats data={data} /> */}
       </div>
       <div className="flex basis-1/4 flex-col gap-3">
         <Articles
@@ -27,13 +27,13 @@ export default function Stats({ data }: { data: any }) {
 
   const mobileView = () => (
     <>
-      <FullTeamStats data={data} />
+      {/* <FullTeamStats data={data} /> */}
     </>
   );
 
   return (
     <>
-      <TeamUserSelection userSelection={"stats"} />
+      {/* <TeamUserSelection userSelection={"stats"} /> */}
       <LeagueContainerBox isDesktopScreen={isDesktopScreen}>
         {isDesktopScreen ? desktopView() : mobileView()}
       </LeagueContainerBox>

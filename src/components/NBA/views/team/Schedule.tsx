@@ -3,9 +3,9 @@
 import Articles from "@/components/Articles";
 import ContainerBox from "@/components/ContainerBox";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import DesktopTeamSchedule from "@/components/DesktopTeamSchedule";
+// import DesktopTeamSchedule from "@/components/DesktopTeamSchedule";
 import Link from "next/link";
-import TeamUserSelection from "@/components/TeamUserSelection";
+// import TeamUserSelection from "@/components/TeamUserSelection";
 import LeagueContainerBox from "@/components/LeagueContainerBox";
 
 export default function TeamPage({ data }: { data: any }) {
@@ -15,7 +15,7 @@ export default function TeamPage({ data }: { data: any }) {
     <>
       <div className="basis-1/2">
         {/* <TeamSchedule teamSchedule={data.teamSchedule} league="nfl" /> */}
-        <DesktopTeamSchedule data={data} league="nba" isTeamView={true} />
+        {/* <DesktopTeamSchedule data={data} league="nba" isTeamView={true} /> */}
       </div>
 
       <div className="flex basis-1/4 flex-col gap-3">
@@ -78,13 +78,13 @@ export default function TeamPage({ data }: { data: any }) {
 
   const mobileView = () => (
     <div className="flex w-full flex-col">
-      <DesktopTeamSchedule data={data} league="nba" isTeamView={true} />
+      {/* <DesktopTeamSchedule data={data} league="nba" isTeamView={true} /> */}
     </div>
   );
 
   return (
     <>
-      <TeamUserSelection userSelection={"schedule"} />
+      {/* <TeamUserSelection userSelection={"schedule"} /> */}
       <LeagueContainerBox isDesktopScreen={isDesktopScreen}>
         {isDesktopScreen ? desktopView() : mobileView()}
       </LeagueContainerBox>

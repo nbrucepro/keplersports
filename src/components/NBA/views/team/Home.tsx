@@ -3,10 +3,10 @@
 import Articles from "@/components/Articles";
 import ContainerBox from "@/components/ContainerBox";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import DesktopTeamSchedule from "@/components/DesktopTeamSchedule";
-import TeamNewsCards from "@/components/TeamNewsCards";
+// import DesktopTeamSchedule from "@/components/DesktopTeamSchedule";
+// import TeamNewsCards from "@/components/TeamNewsCards";
 import Link from "next/link";
-import TeamUserSelection from "@/components/TeamUserSelection";
+// import TeamUserSelection from "@/components/TeamUserSelection";
 
 export default function TeamPage({ data }: { data: any }) {
   const isDesktopScreen = useMediaQuery("(min-width:800px)");
@@ -14,11 +14,11 @@ export default function TeamPage({ data }: { data: any }) {
   const desktopView = () => (
     <>
       <div className="basis-1/4">
-        <DesktopTeamSchedule data={data} league="nba" isTeamView={false} />
+        {/* <DesktopTeamSchedule data={data} league="nba" isTeamView={false} /> */}
       </div>
 
       <div className="basis-1/2">
-        <TeamNewsCards league="nba" data={data} />
+        {/* <TeamNewsCards league="nba" data={data} /> */}
       </div>
 
       <div className="flex basis-1/4 flex-col gap-3">
@@ -81,13 +81,13 @@ export default function TeamPage({ data }: { data: any }) {
 
   const mobileView = () => (
     <div className="flex w-full flex-col">
-      <TeamNewsCards data={data} league="nba" />
+      {/* <TeamNewsCards data={data} league="nba" /> */}
     </div>
   );
 
   return (
     <>
-      <TeamUserSelection userSelection={"home"} />
+      {/* <TeamUserSelection userSelection={"home"} /> */}
       <ContainerBox isDesktopScreen={isDesktopScreen}>
         {isDesktopScreen ? desktopView() : mobileView()}
       </ContainerBox>

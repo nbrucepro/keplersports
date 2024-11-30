@@ -3,7 +3,7 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ContainerBox from "@/components/ContainerBox";
 import Articles from "@/components/Articles";
-import TeamUserSelection from "@/components/TeamUserSelection";
+// import TeamUserSelection from "@/components/TeamUserSelection";
 import TeamRoster from "@/components/NBA/NBARoster";
 import LeagueContainerBox from "@/components/LeagueContainerBox";
 
@@ -33,7 +33,7 @@ export default function Roster({ data }: { data: any }) {
 
   return (
     <>
-      <TeamUserSelection userSelection={"roster"} />
+      {/* <TeamUserSelection userSelection={"roster"} /> */}
       <LeagueContainerBox isDesktopScreen={isDesktopScreen}>
         {isDesktopScreen ? desktopView() : mobileView()}
       </LeagueContainerBox>
