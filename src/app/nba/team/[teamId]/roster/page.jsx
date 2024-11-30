@@ -5,8 +5,6 @@ export const revalidate = 600;
 
 export async function generateMetadata({
   params,
-}: {
-  params: { teamId: string };
 }) {
   const teamData = await getTeamData("nba", params.teamId);
 
@@ -15,7 +13,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { teamId: string } }) {
+export default async function Page({ params }) {
   const teamNews = await getTeamNews("nba", params.teamId);
   const teamRoster = await getTeamRoster("nba", params.teamId);
   const teamData = await getTeamData("nba", params.teamId);

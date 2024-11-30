@@ -6,21 +6,15 @@ import { v4 } from "uuid";
 // import usePreferredColor from "../hooks/usePreferredColor";
 import { getFilteredTeamShots } from "@/lib/utils";
 
-type FilterOptions = {
-  selectedQuarter: string;
-  showMissedShots: boolean;
-  showMadeShots: boolean;
-  selectedPlayer: string;
-};
 
-const initialFilterOptions: FilterOptions = {
+const initialFilterOptions = {
   selectedQuarter: "All Quarters",
   showMissedShots: true,
   showMadeShots: true,
   selectedPlayer: "All Players",
 };
 
-export default function ShotChart({ data }: { data: any }) {
+export default function ShotChart({ data }) {
   const [showFilters, setShowFilters] = useState(false);
   const [homeTeamFilterOptions, setHomeTeamFilterOptions] =
     useState(initialFilterOptions);
@@ -60,7 +54,7 @@ export default function ShotChart({ data }: { data: any }) {
         />
         <div className="absolute left-0 top-0 h-full w-full border-black">
           <div className="absolute h-full w-1/2 translate-x-full rotate-[90deg]">
-            {homeTeamShots.map((play: any) => (
+            {homeTeamShots.map((play) => (
               <div key={v4()}>
                 {play.scoringPlay ? (
                   <>
@@ -89,7 +83,7 @@ export default function ShotChart({ data }: { data: any }) {
             ))}
           </div>
           <div className="absolute h-full w-1/2 rotate-[270deg] border-red-400">
-            {awayTeamShots.map((play: any) => (
+            {awayTeamShots.map((play) => (
               <div key={v4()}>
                 {play.scoringPlay ? (
                   <>
@@ -142,7 +136,7 @@ export default function ShotChart({ data }: { data: any }) {
                 "2nd Quarter",
                 "3rd Quarter",
                 "4th Quarter",
-              ].map((text: string) => (
+              ].map((text) => (
                 <option key={v4()} id={`${text}`} value={`${text}`}>
                   {`${text}`}
                 </option>
@@ -176,7 +170,7 @@ export default function ShotChart({ data }: { data: any }) {
                 All Players
               </option>
               {data.gameData.boxscore.players[0].statistics[0].athletes.map(
-                (athlete: any) => {
+                (athlete) => {
                   if (!athlete.athlete.didNotPlay)
                     return (
                       <option
@@ -266,7 +260,7 @@ export default function ShotChart({ data }: { data: any }) {
                 All Players
               </option>
               {data.gameData.boxscore.players[1].statistics[0].athletes.map(
-                (athlete: any) => {
+                (athlete) => {
                   if (!athlete.athlete.didNotPlay)
                     return (
                       <option

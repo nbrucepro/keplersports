@@ -1,13 +1,11 @@
-import View from "@/components/NBA/views/game/News";
+import View from "@/components/NBA/views/game/Boxscore";
 
-export default async function Page({ params }: { params: { gameId: string } }) {
+export default async function Page({ params }) {
   return <View gameId={params.gameId} />;
 }
 
 export async function generateMetadata({
   params,
-}: {
-  params: { gameId: string };
 }) {
   const gameData = await fetch(
     `https://nextjs-sportly.vercel.app/api/nba/gameData/${params.gameId}`,
@@ -20,6 +18,6 @@ export async function generateMetadata({
       day: "2-digit",
       month: "short",
       year: "numeric",
-    })}) News - Sportly`,
+    })}) Boxscore - Sportly`,
   };
 }

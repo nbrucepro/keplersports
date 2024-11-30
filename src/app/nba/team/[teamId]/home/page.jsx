@@ -1,22 +1,26 @@
-import View from "@/components/NBA/views/team/Stats";
-import { getTeamNews, getNBATeamStats, getTeamData } from "@/lib/utils";
+import View from "@/components/NBA/views/team/Home";
+import {
+  getNBATeamStats,
+  getTeamNews,
+  getTeamSchedule,
+  getTeamData,
+} from "@/lib/utils";
 
 export const revalidate = 600;
 
 export async function generateMetadata({
   params,
-}: {
-  params: { teamId: string };
 }) {
   const teamData = await getTeamData("nba", params.teamId);
 
   return {
-    title: `${teamData.team.location} ${teamData.team.name} 2023-24 Stats - Sportly`,
+    title: `${teamData.team.location} ${teamData.team.name} Scores, News, Stats - Sportly`,
   };
 }
 
-export default async function Page({ params }: { params: { teamId: string } }) {
+export default async function Page({ params }) {
   const teamNews = await getTeamNews("nba", params.teamId);
+  const teamSchedule = await getTeamSchedule("nba", params.teamId);
   const teamStats = await getNBATeamStats(params.teamId);
   const teamData = await getTeamData("nba", params.teamId);
 
@@ -24,6 +28,7 @@ export default async function Page({ params }: { params: { teamId: string } }) {
     <View
       data={{
         teamData,
+        teamSchedule,
         teamStats: teamStats.displayStats,
         fullTeamStats: teamStats.fullStats,
         teamNews,

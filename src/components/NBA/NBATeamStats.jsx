@@ -2,13 +2,13 @@ import Image from "next/image";
 import { useState } from "react";
 // import usePreferredColor from "../hooks/usePreferredColor";
 
-export default function NBATeamStats({ data }: { data: any }) {
+export default function NBATeamStats({ data }) {
   const { homeTeamColor, awayTeamColor } = useState(data);
   function getTeamStatDisplay(
-    teamOption: number,
-    statOption: number,
-    color: string,
-    homeTeam: boolean,
+    teamOption,
+    statOption,
+    color,
+    homeTeam,
   ) {
     const statName =
       data.gameData?.boxscore?.teams?.[teamOption].statistics?.[statOption]

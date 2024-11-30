@@ -8,9 +8,6 @@ import { v4 } from "uuid";
 export default function NBAGameHeader({
   league,
   data,
-}: {
-  league: string;
-  data: any;
 }) {
   const isDesktopScreen = useMediaQuery("(min-width:800px)");
   const homeTeam = data.gameData.header.competitions[0].competitors[0];
@@ -96,7 +93,7 @@ export default function NBAGameHeader({
                     <div className="flex h-[15px] w-[100px] items-center justify-center gap-[2px]">
                       {new Array(data?.awayTeam?.timeoutsRemaining ?? 0)
                         .fill("1")
-                        .map((num: string, i: number) => (
+                        .map((num, i) => (
                           <div
                             key={v4()}
                             className="h-[6px] w-[6px] rounded-full bg-yellow-400"
@@ -104,7 +101,7 @@ export default function NBAGameHeader({
                         ))}
                       {new Array(7 - data?.awayTeam?.timeoutsRemaining ?? 0)
                         .fill("1")
-                        .map((num: string, i: number) => (
+                        .map((num, i) => (
                           <div
                             key={v4()}
                             className="h-[6px] w-[6px] rounded-full bg-gray-200"
@@ -159,7 +156,7 @@ export default function NBAGameHeader({
                   <p className="col-start-1 text-left text-[11px] opacity-80">
                     {data.awayTeam.team.abbreviation}
                   </p>
-                  {new Array(4).fill("1").map((num: string, i: number) => (
+                  {new Array(4).fill("1").map((num, i) => (
                     <p
                       key={v4()}
                       className="text-center text-[11px] opacity-60"
@@ -173,7 +170,7 @@ export default function NBAGameHeader({
                   <p className="col-start-1 text-left text-[11px] opacity-80">
                     {data.homeTeam.team.abbreviation}
                   </p>
-                  {new Array(4).fill("1").map((num: string, i: number) => (
+                  {new Array(4).fill("1").map((num, i) => (
                     <p
                       key={v4()}
                       className="text-center text-[11px] opacity-60"
@@ -439,7 +436,7 @@ export default function NBAGameHeader({
                       <div className="flex h-[15px] w-[100px] items-center justify-center gap-[2px]">
                         {new Array(data?.awayTeam?.timeoutsRemaining ?? 0)
                           .fill("1")
-                          .map((num: string, i: number) => (
+                          .map((num, i) => (
                             <div
                               key={v4()}
                               className="h-[4px] w-[4px] rounded-full bg-yellow-400"
@@ -447,7 +444,7 @@ export default function NBAGameHeader({
                           ))}
                         {new Array(7 - data?.awayTeam?.timeoutsRemaining ?? 0)
                           .fill("1")
-                          .map((num: string, i: number) => (
+                          .map((num, i) => (
                             <div
                               key={v4()}
                               className="h-[4px] w-[4px] rounded-full bg-gray-200"
@@ -510,7 +507,7 @@ export default function NBAGameHeader({
                       <div className="flex h-[15px] w-[100px] items-center justify-center gap-[2px]">
                         {new Array(data?.homeTeam?.timeoutsRemaining ?? 0)
                           .fill("1")
-                          .map((num: string, i: number) => (
+                          .map((num, i) => (
                             <div
                               key={v4()}
                               className="h-[4px] w-[4px] rounded-full bg-yellow-400"
@@ -518,7 +515,7 @@ export default function NBAGameHeader({
                           ))}
                         {new Array(7 - data?.homeTeam?.timeoutsRemaining ?? 0)
                           .fill("1")
-                          .map((num: string, i: number) => (
+                          .map((num, i) => (
                             <div
                               key={v4()}
                               className="h-[4px] w-[4px] rounded-full bg-gray-200"

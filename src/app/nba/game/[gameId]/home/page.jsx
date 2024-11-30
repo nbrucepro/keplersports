@@ -1,9 +1,11 @@
-import View from "@/components/NBA/views/game/PlaybyPlay";
+import View from "@/components/NBA/views/game/Home";
+
+export default async function Page({ params }) {
+  return <View gameId={params.gameId} />;
+}
 
 export async function generateMetadata({
   params,
-}: {
-  params: { gameId: string };
 }) {
   const gameData = await fetch(
     `https://nextjs-sportly.vercel.app/api/nba/gameData/${params.gameId}`,
@@ -16,10 +18,6 @@ export async function generateMetadata({
       day: "2-digit",
       month: "short",
       year: "numeric",
-    })}) Play by Play - Sportly`,
+    })}) - Sportly`,
   };
-}
-
-export default async function Page({ params }: { params: { gameId: string } }) {
-  return <View gameId={params.gameId} />;
 }
