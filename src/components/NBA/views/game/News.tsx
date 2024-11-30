@@ -2,10 +2,10 @@
 
 import Articles from "@/components/Articles";
 import ContainerBox from "@/components/ContainerBox";
-import DivisionStandings from "@/components/DivisionStandings";
-import GameUserSelection from "@/components/GameUserSelection";
+// import DivisionStandings from "@/components/DivisionStandings";
+// import GameUserSelection from "@/components/GameUserSelection";
 import Loading from "@/components/Loading";
-import MatchupPredictor from "@/components/MatchupPredictor";
+// import MatchupPredictor from "@/components/MatchupPredictor";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import useSWR from "swr";
 
@@ -34,9 +34,10 @@ export default function Page({ gameId }: { gameId: string }) {
 
       <div className="flex basis-1/4 flex-col gap-3">
         {data.gameData.predictor && (
-          <MatchupPredictor data={data} league="nba" />
+          <></>
+          // <MatchupPredictor data={data} league="nba" />
         )}
-        <DivisionStandings data={data} isNFL={false} league="nba" />
+        {/* <DivisionStandings data={data} isNFL={false} league="nba" /> */}
       </div>
     </>
   );
@@ -48,7 +49,7 @@ export default function Page({ gameId }: { gameId: string }) {
   if (isLoading) return <Loading />;
   return (
     <>
-      <GameUserSelection userSelection={"news"} data={data} />
+      {/* <GameUserSelection userSelection={"news"} data={data} /> */}
       <ContainerBox isDesktopScreen={isDesktopScreen}>
         {isDesktopScreen ? desktopView() : mobileView()}
       </ContainerBox>

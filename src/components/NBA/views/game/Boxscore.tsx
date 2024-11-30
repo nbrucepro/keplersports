@@ -1,6 +1,6 @@
 "use client";
 
-import GameUserSelection from "@/components/GameUserSelection";
+// import GameUserSelection from "@/components/GameUserSelection";
 import NBAGameStats from "@/components/NBA/NBAGameStats";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import useSWR from "swr";
@@ -42,7 +42,7 @@ export default function Boxscore({ gameId }: { gameId: string }) {
   if (isLoading) return <Loading />;
   return (
     <>
-      <GameUserSelection userSelection={"boxscore"} data={data} />
+      {/* <GameUserSelection userSelection={"boxscore"} data={data} /> */}
       <LeagueContainerBox isDesktopScreen={isDesktopScreen}>
         {isDesktopScreen ? desktopView() : mobileView()}
       </LeagueContainerBox>

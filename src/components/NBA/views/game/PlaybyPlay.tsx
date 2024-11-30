@@ -1,10 +1,10 @@
 "use client";
 
 import Articles from "@/components/Articles";
-import GameUserSelection from "@/components/GameUserSelection";
-import MatchupPredictor from "@/components/MatchupPredictor";
+// import GameUserSelection from "@/components/GameUserSelection";
+// import MatchupPredictor from "@/components/MatchupPredictor";
 import NBAPlaybyPlay from "@/components/NBA/NBAPlaybyPlay";
-import SeasonSeries from "@/components/SeasonSeries";
+// import SeasonSeries from "@/components/SeasonSeries";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import useSWR from "swr";
 
@@ -31,9 +31,10 @@ export default function PlaybyPlay({ gameId }: { gameId: any }) {
       </div>
       <div className="flex basis-1/4 flex-col gap-3">
         {data.gameData.predictor && (
-          <MatchupPredictor data={data} league="nba" />
+          <></>
+          // <MatchupPredictor data={data} league="nba" />
         )}
-        <SeasonSeries data={data} league="nba" />
+        {/* <SeasonSeries data={data} league="nba" /> */}
         <Articles
           title="NBA News"
           news={data.gameData.news.articles}
@@ -48,7 +49,7 @@ export default function PlaybyPlay({ gameId }: { gameId: any }) {
   if (isLoading) return <Loading />;
   return (
     <>
-      <GameUserSelection userSelection={"playbyplay"} data={data} />
+      {/* <GameUserSelection userSelection={"playbyplay"} data={data} /> */}
       <LeagueContainerBox isDesktopScreen={isDesktopScreen}>
         {isDesktopScreen ? desktopView() : mobileView()}
       </LeagueContainerBox>
