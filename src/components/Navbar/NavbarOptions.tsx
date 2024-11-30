@@ -34,9 +34,9 @@ export default function NavbarOptions() {
   const pathName = usePathname();
   const dropDownMenu = (league: string, divisonTeams: any) => (
     <div className="menu-option hover:text-green-500 relative flex h-full cursor-pointer flex-row items-center">
-      <Link href={`/${league}`} style={{ textDecoration: "none" }}>
+      <Link href={`#`} style={{ textDecoration: "none" }}>
         <p
-          className={`relative font-[400] hover:text-green-500  text-white ${
+          className={`relative text-xs sm:text-sm font-[400] md:text-md hover:text-green-500  text-white ${
             pathName.includes(league) && "league-open"
           }`}
         >
@@ -115,13 +115,13 @@ export default function NavbarOptions() {
   );
   return (
     <>
-      <div className="flex w-[80vw] justify-between">
-        <div className="flex gap-6">
+      <div className="flex w-[80vw] md:flex-row md:justify-between xs:flex-col">
+        <div className="sm:flex gap-1 hidden sm:gap-6">
           {dropDownMenu("First team", nbaDivisionTeams)}
           {dropDownMenu("History", nbaDivisionTeams)}
           {dropDownMenu("Kepler teams", nbaDivisionTeams)}
         </div>
-        <div className="flex gap-6">
+        <div className="sm:flex gap-1 hidden sm:gap-6">
           {dropDownMenu("Events & Tickets", nbaDivisionTeams)}
           {dropDownMenu("Shop", nbaDivisionTeams)}
         </div>

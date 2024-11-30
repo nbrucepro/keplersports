@@ -15,7 +15,7 @@ export default function LeagueUserSelection({
       <div className="testing flex h-10 w-full max-w-full items-center justify-start gap-3 overflow-x-auto overflow-y-hidden px-2 md:h-11 md:pl-10 2xl:w-1/2 2xl:justify-center">
         <div className="leage-logo relative flex flex-shrink-0 flex-row items-center gap-2">
           <Image
-            src={`/nba/kplogo.png`}
+            src={`/nba/kplogo.ico`}
             width={500}
             height={500}
             alt="league logo"

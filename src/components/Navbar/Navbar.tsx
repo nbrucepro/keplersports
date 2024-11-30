@@ -34,7 +34,7 @@ export default function Navbar() {
             alt="league logo"
             className="w-50 object-cover"
           /> */}
-          <h1 className=" text-xl font-bold italic">
+          <h1 className="md:text-lg text-md font-bold italic">
           Kepler sports
           </h1>
         </Link>

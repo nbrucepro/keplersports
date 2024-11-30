@@ -45,10 +45,18 @@ export default function Home({ date }: { date?: string }) {
           </>
         ) : (
           <>
-            <LeagueUserSelection userSelection={"scoreboard"} league="nba" />
+          <Hello/>
+            {/* <LeagueUserSelection userSelection={"scoreboard"} league="nba" /> */}
             <LeagueContainerBox isDesktopScreen={isDesktopScreen}>
-              <NBAScoreboard initialScoreData={data} date={date} />
+            <Articles
+                title={`Kepler News`}
+                news={data?.news?.articles}
+                limit={10}
+              />
+              {/* <NBAScoreboard initialScoreData={data} date={date} /> */}
             </LeagueContainerBox>
+            <Vidpart/>
+            <Footer/>
           </>
         )}
       </main>
