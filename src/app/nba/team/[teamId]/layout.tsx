@@ -1,6 +1,6 @@
 "use client";
 
-import TeamHeader from "@/components/TeamHeader";
+// import TeamHeader from "@/components/TeamHeader";
 import useSwr from "swr";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -21,7 +21,7 @@ export default function RootLayout({
   if (!isLoading)
     return (
       <>
-        <TeamHeader data={data} league="nba" />
+        {/* <TeamHeader data={data} league="nba" /> */}
         {children}
       </>
     );

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { v4 } from "uuid";
-import usePreferredColor from "../hooks/usePreferredColor";
+// import usePreferredColor from "../hooks/usePreferredColor";
 import { getFilteredTeamShots } from "@/lib/utils";
 
 type FilterOptions = {
@@ -27,7 +27,7 @@ export default function ShotChart({ data }: { data: any }) {
   const [awayTeamFilterOptions, setAwayTeamFilterOptions] =
     useState(initialFilterOptions);
 
-  const { homeTeamColor, awayTeamColor } = usePreferredColor(data);
+  const { homeTeamColor, awayTeamColor } = useState(data);
 
   const homeTeamShots = getFilteredTeamShots(
     data.gameData.plays,
