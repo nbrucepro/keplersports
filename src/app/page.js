@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default async function Page() {
-    return <NBAPage />;
+    return <div>Hello</div>;
 }

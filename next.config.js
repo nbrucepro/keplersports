@@ -15,15 +15,15 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
         },
       ],
     },
-    async redirects() {
-      return [
-        {
-          source: "/",
-          destination: "/nba",
-          permanent: true,
-        },
-      ];
-    },
+    // async redirects() {
+    //   return [
+    //     {
+    //       source: "/",
+    //       destination: "/nba",
+    //       permanent: true,
+    //     },
+    //   ];
+    // },
   });
   
   // module.exports = {
