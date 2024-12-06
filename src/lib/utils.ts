@@ -513,14 +513,14 @@ export function formatDate(date: string) {
 }
 
 export function getWeekDay(date: string) {
-  return new Date(date + "T00:00:00Z").toLocaleDateString(undefined, {
+  return new Date(date).toLocaleDateString(undefined, {
     timeZone: "UTC",
     weekday: "short",
   });
 }
 
 export function getMonthAndDate(date: string) {
-  return new Date(date + "T00:00:00Z").toLocaleDateString(undefined, {
+  return new Date(date).toLocaleDateString(undefined, {
     timeZone: "UTC",
     month: "short",
     day: "numeric",

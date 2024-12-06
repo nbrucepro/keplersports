@@ -1,55 +1,147 @@
 import React from 'react'
 
 const Footer = () => {
+    const players = [
+        {names:"Jonathan Mugabo"},
+        {names:"Yvan Mahoro"},
+        {names:"Arstide Mugabe"},
+        {names:"Yvan Mahoro"},
+        {names:"Arstide Mugabe"},
+    ]
   return (
     
 
 <footer className="bg-white dark:bg-gray-900">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
-              <a href="" className="flex items-center">
-                  <img src="/nba/kplogo.ico" className="h-8 me-3" alt="FlowBite Logo" />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kepler sports</span>
-              </a>
+        <div>
+        <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-white">Kepler BBC first team</h2>
+          <div className="grid grid-cols-2 gap-8 sm:gap-4 sm:grid-cols-5">
+          
+              <div>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Point Guards</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                    {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Shooting Guards</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Small Forwards</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Power Forwards</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Center</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+      </div>
+        <div className='mt-12'>
+        <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-white">Kepler VC first team</h2>
+          <div className="grid grid-cols-2 gap-8 sm:gap-4 sm:grid-cols-6">
+          
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                      <li className="mb-4">
-                          <a href="" className="hover:underline">Kepler sports</a>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Outside Hitters</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
                       </li>
-                      <li>
-                          <a href="" className="hover:underline">Tailwind CSS</a>
-                      </li>
+                    ))}
                   </ul>
               </div>
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                      <li className="mb-4">
-                          <a href="" className="hover:underline ">Github</a>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Opposite Hitters</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
                       </li>
-                      <li>
-                          <a href="" className="hover:underline">Discord</a>
-                      </li>
+                    ))}
                   </ul>
               </div>
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                      <li className="mb-4">
-                          <a href="#" className="hover:underline">Privacy Policy</a>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Setters</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
                       </li>
-                      <li>
-                          <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Middle Blockers</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
                       </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Liberos</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-md font-semibold text-gray-900 uppercase dark:text-white">Defensive Specialist</h2>
+                  <ul className="text-gray-500 dark:text-gray-400 font-small">
+                  {players?.map((player,index) => (
+                        <li key={index} className='py-2'>
+                          <a href="#" className="hover:underline">{player.names}</a>
+                      </li>
+                    ))}
                   </ul>
               </div>
           </div>
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div className="mb-6 md:pb-12">
+              <a href="" className="flex items-center">
+                  <img src="/nba/kplogo.ico" className="h-8 me-3" alt="FlowBite Logo" />
+                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kepler sports</span>
+              </a>
+          </div>
       <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-md text-gray-500 sm:text-center dark:text-gray-400 font-bold">© copyright <a href="" className="hover:underline font-bold">Kepler sports™</a>. All Rights Reserved.
           </span>
