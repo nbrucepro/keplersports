@@ -34,12 +34,12 @@ export default function Home({ date }: { date?: string }) {
             <Hello/>
             <LeagueContainerBox isDesktopScreen={isDesktopScreen}>
               <NBAScoreboard initialScoreData={data} date={date} />
-              <Articles
+              {/* <Articles
                 title={`Kepler News`}
                 news={data?.news?.articles}
                 limit={10}
-              />
-            </LeagueContainerBox>
+                /> */}
+                </LeagueContainerBox>
             <Vidpart/>
             <Footer/>
           </>

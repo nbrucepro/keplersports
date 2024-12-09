@@ -102,8 +102,8 @@ function NBAScoreboard({
               }
             />
             {getDateElements().map((date: string) => (
-              <Link
-                href={`/nba/${date}`}
+              <div
+                // href={`/nba/${date}`}
                 key={uuidv4()}
                 style={{ opacity: date === selectedDate ? 1 : 0.5 }}
                 className="jusitfy-center flex flex-shrink-0 cursor-pointer flex-col items-center p-2 font-semibold"
@@ -114,7 +114,7 @@ function NBAScoreboard({
                 <div className="flex flex-row items-center justify-center gap-1">
                   <p className="text-[11px]">{getMonthAndDate(date)}</p>
                 </div>
-              </Link>
+              </div>
             ))}
             <Image
               src="/icons/chevron-right.svg"
