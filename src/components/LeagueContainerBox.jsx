@@ -4,7 +4,7 @@ export default function LeagueContainerBox({
 }) 
 {
   return isDesktopScreen ? (
-    <div className="bg-gradient-to-l from-black  to-green-900 w-full">
+    <div className="container w-full">
       <div className="mx-auto grid w-[800px] max-w-full  grid-cols-1 gap-x-6 gap-y-2 lg:w-[1000px] lg:grid-cols-[800px_1fr] xl:w-[1280px] xl:grid-cols-[1200px_1fr]">
         {children}
       </div>

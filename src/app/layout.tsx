@@ -4,6 +4,12 @@ import { Inter, Russo_One } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Navbar from "../components/Navbar/Navbar";
 
+
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+
 const inter = Inter({
   weight: "variable",
   subsets: ["latin"],
@@ -32,6 +38,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>

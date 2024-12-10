@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "3rem",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -17,6 +24,8 @@ const config: Config = {
         calc: "10vh",
       },
       colors: {
+        primary: "#fea928",
+        secondary: "#ed8900",
         CAROLINA_BLUE: "#0085CA",
       },
       screens: {

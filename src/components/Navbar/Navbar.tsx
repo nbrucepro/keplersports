@@ -39,7 +39,7 @@ export default function Navbar() {
           </h1>
         </Link>
       </div>
-      <div className="xxs:gap-4 ml-[-1rem] flex h-full w-full flex-row justify-end gap-2 pr-4 md:ml-1 md:justify-start md:gap-20 md:pr-0">
+      <div className="xxs:gap-4 ml-[-1rem] hidden md:flex h-full w-full flex-row justify-end gap-2 pr-4 md:ml-1 md:justify-start md:gap-20 md:pr-0">
         <NavbarOptions />
       </div>
     </nav>

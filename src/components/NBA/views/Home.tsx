@@ -10,6 +10,8 @@ import NBAScoreboard from "../NBAScoreboard";
 import Hello from "@/components/essentials/Hello";
 import Footer from "@/components/essentials/Footer";
 import Vidpart from "@/components/essentials/Vidpart";
+import Testimonials from "@/components/essentials/Testimonials";
+import Products from "@/components/essentials/Products";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -40,6 +42,8 @@ export default function Home({ date }: { date?: string }) {
                 limit={10}
                 /> */}
                 </LeagueContainerBox>
+            <Products/>
+            <Testimonials/>
             <Vidpart/>
             <Footer/>
           </>
@@ -48,11 +52,12 @@ export default function Home({ date }: { date?: string }) {
           <Hello/>
             {/* <LeagueUserSelection userSelection={"scoreboard"} league="nba" /> */}
             <LeagueContainerBox isDesktopScreen={isDesktopScreen}>
-            <Articles
+            <Testimonials/>
+            {/* <Articles
                 title={`Kepler News`}
                 news={data?.news?.articles}
                 limit={10}
-              />
+              /> */}
               {/* <NBAScoreboard initialScoreData={data} date={date} /> */}
             </LeagueContainerBox>
             <Vidpart/>

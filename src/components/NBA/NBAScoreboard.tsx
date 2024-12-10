@@ -80,7 +80,7 @@ function NBAScoreboard({
 
   function dateSelector() {
     return (
-      <div className="mb-3 w-full rounded-xl bg-white p-3">
+      <div className="mb-3 mt-2 w-full rounded-xl bg-white p-3">
         <p className="mb-1 text-xl font-bold opacity-80 md:text-2xl">
           Kepler BBC Scoreboard
         </p>
