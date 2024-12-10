@@ -76,7 +76,7 @@ const Products = () => {
               >
       <div className="absolute ">
           <img
-            src="/thumbnail.png"
+            src="/nba/captain.jpg"
             alt="Background Image"
             className="h-[320px] w-[200px] object-cover rounded-md"
           />
