@@ -438,7 +438,7 @@ export default function ScoreCard({
                   width={576}
                   height={324}
                   alt="video"
-                  src={"/thumbnail.png"}
+                  src={"/thumbnail.PNG"}
                   className="video-preview h-full w-full object-cover"
                 />
                 <Link
