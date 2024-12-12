@@ -1,16 +1,9 @@
 import React from 'react'
+import { menbbc,wbbc } from './data';
 
 const Footer = () => {
-    const players = [
-        {names:"Jonathan Mugabo"},
-        {names:"Yvan Mahoro"},
-        {names:"Arstide Mugabe"},
-        {names:"Yvan Mahoro"},
-        {names:"Arstide Mugabe"},
-    ]
-  return (
-    
-
+  
+  return (  
 <footer className="bg-[#212721]">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div>
@@ -20,9 +13,9 @@ const Footer = () => {
               <div>
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Point Guards</h2>
                   <ul className="text-green-500 text-sm">
-                    {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
-                          <a href="#" className="hover:underline">{player.names}</a>
+                    {menbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "pg" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "pg" && player.names}</a>
                       </li>
                     ))}
                   </ul>
@@ -30,9 +23,9 @@ const Footer = () => {
               <div>
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Shooting Guards</h2>
                   <ul className="text-green-500 text-sm">
-                  {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
-                          <a href="#" className="hover:underline">{player.names}</a>
+                  {menbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "sg" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "sg" && player.names}</a>
                       </li>
                     ))}
                   </ul>
@@ -40,9 +33,9 @@ const Footer = () => {
               <div>
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Small Forwards</h2>
                   <ul className="text-green-500 text-sm">
-                  {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
-                          <a href="#" className="hover:underline">{player.names}</a>
+                  {menbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "sf" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "sf" && player.names}</a>
                       </li>
                     ))}
                   </ul>
@@ -50,9 +43,9 @@ const Footer = () => {
               <div>
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Power Forwards</h2>
                   <ul className="text-green-500 text-sm">
-                  {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
-                          <a href="#" className="hover:underline">{player.names}</a>
+                  {menbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "pf" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "pf" && player.names}</a>
                       </li>
                     ))}
                   </ul>
@@ -60,9 +53,9 @@ const Footer = () => {
               <div>
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Center</h2>
                   <ul className="text-green-500 text-sm">
-                  {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
-                          <a href="#" className="hover:underline">{player.names}</a>
+                  {menbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "cr" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "cr" && player.names}</a>
                       </li>
                     ))}
                   </ul>
@@ -70,6 +63,62 @@ const Footer = () => {
           </div>
       </div>
         <div className='mt-12'>
+        <h2 className="mb-6 text-lg font-semibold text-gray-100 uppercase">Kepler WBBC first team</h2>
+          <div className="grid grid-cols-2 gap-8 sm:gap-4 sm:grid-cols-5">
+          
+              <div>
+                  <h2 className="mb-6 md:text-md text-gray-100 uppercase">Point Guards</h2>
+                  <ul className="text-green-500 text-sm">
+                    {wbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "pg" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "pg" && player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 md:text-md text-gray-100 uppercase">Shooting Guards</h2>
+                  <ul className="text-green-500 text-sm">
+                  {wbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "sg" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "sg" && player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 md:text-md text-gray-100 uppercase">Small Forwards</h2>
+                  <ul className="text-green-500 text-sm">
+                  {wbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "sf" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "sf" && player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 md:text-md text-gray-100 uppercase">Power Forwards</h2>
+                  <ul className="text-green-500 text-sm">
+                  {wbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "pf" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "pf" && player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 md:text-md text-gray-100 uppercase">Center</h2>
+                  <ul className="text-green-500 text-sm">
+                  {wbbc?.map((player,index) => (
+                        <li key={index} className={`py-2 ${player.role !== "cr" && "hidden"}`}>
+                          <a href="#" className="hover:underline">{player.role == "cr" && player.names}</a>
+                      </li>
+                    ))}
+                  </ul>
+              </div>
+          </div>
+      </div>
+        {/* <div className='mt-12'>
         <h2 className="mb-6 text-lg font-semibold text-gray-100 uppercase">Kepler VC first team</h2>
           <div className="grid grid-cols-2 gap-8 sm:gap-4 sm:grid-cols-6">
           
@@ -77,7 +126,7 @@ const Footer = () => {
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Outside Hitters</h2>
                   <ul className="text-green-500 text-sm">
                   {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
+                        <li key={index} className={`py-2 ${player.role !== "sg" && "hidden"}`}>
                           <a href="#" className="hover:underline">{player.names}</a>
                       </li>
                     ))}
@@ -87,7 +136,7 @@ const Footer = () => {
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Opposite Hitters</h2>
                   <ul className="text-green-500 text-sm">
                   {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
+                        <li key={index} className={`py-2 ${player.role !== "sg" && "hidden"}`}>
                           <a href="#" className="hover:underline">{player.names}</a>
                       </li>
                     ))}
@@ -97,7 +146,7 @@ const Footer = () => {
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Setters</h2>
                   <ul className="text-green-500 text-sm">
                   {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
+                        <li key={index} className={`py-2 ${player.role !== "sg" && "hidden"}`}>
                           <a href="#" className="hover:underline">{player.names}</a>
                       </li>
                     ))}
@@ -107,7 +156,7 @@ const Footer = () => {
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Middle Blockers</h2>
                   <ul className="text-green-500 text-sm">
                   {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
+                        <li key={index} className={`py-2 ${player.role !== "sg" && "hidden"}`}>
                           <a href="#" className="hover:underline">{player.names}</a>
                       </li>
                     ))}
@@ -117,7 +166,7 @@ const Footer = () => {
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Liberos</h2>
                   <ul className="text-green-500 text-sm">
                   {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
+                        <li key={index} className={`py-2 ${player.role !== "sg" && "hidden"}`}>
                           <a href="#" className="hover:underline">{player.names}</a>
                       </li>
                     ))}
@@ -127,14 +176,14 @@ const Footer = () => {
                   <h2 className="mb-6 md:text-md text-gray-100 uppercase">Defensive Specialist</h2>
                   <ul className="text-green-500 text-sm">
                   {players?.map((player,index) => (
-                        <li key={index} className='py-2'>
+                        <li key={index} className={`py-2 ${player.role !== "sg" && "hidden"}`}>
                           <a href="#" className="hover:underline">{player.names}</a>
                       </li>
                     ))}
                   </ul>
               </div>
           </div>
-      </div>
+      </div> */}
       <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
       <div className="mb-6 md:pb-12">
               <a href="" className="flex items-center">
