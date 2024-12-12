@@ -4,13 +4,11 @@ import Link from "next/link";
 import {
   nbaDivisionTeams,
   nameExceptions,
-  nflDivisonTeams,
-  mlbDivisonTeams,
 } from "../../lib/constants";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import { usePathname } from "next/navigation";
-
+import { TbLayoutNavbarFilled } from "react-icons/tb";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const setTeamImageSrc = (fullName: string, league: string) => {
@@ -32,6 +30,20 @@ const setTeamImageSrc = (fullName: string, league: string) => {
 
 export default function NavbarOptions() {
   const pathName = usePathname();
+  const leftMenu = (league: string, divisonTeams: any) => (
+    <div className="menu-option hover:text-green-500 relative gap-x-2 justify-center flex h-full cursor-pointer flex-row items-center">
+      <Link href={`#`} style={{ textDecoration: "none" }}>
+        <p
+          className={`relative text-xs sm:text-sm font-[400] flex items-center gap-x-1 md:text-md hover:text-green-500  text-white ${
+            pathName.includes(league) && "league-open"
+          }`}
+        >
+           {<TbLayoutNavbarFilled />}
+        {league} 
+        </p>
+      </Link>
+    </div>
+  );
   const dropDownMenu = (league: string, divisonTeams: any) => (
     <div className="menu-option hover:text-green-500 relative flex h-full cursor-pointer flex-row items-center">
       <Link href={`#`} style={{ textDecoration: "none" }}>
@@ -117,13 +129,13 @@ export default function NavbarOptions() {
     <>
       <div className="flex w-[80vw] md:flex-row md:justify-between xs:flex-col">
         <div className="sm:flex gap-1 hidden sm:gap-6">
-          {dropDownMenu("First team", nbaDivisionTeams)}
-          {dropDownMenu("History", nbaDivisionTeams)}
-          {dropDownMenu("Kepler teams", nbaDivisionTeams)}
+          {leftMenu("First team", nbaDivisionTeams)}
+          {leftMenu("History", nbaDivisionTeams)}
+          {leftMenu("Kepler teams", nbaDivisionTeams)}
         </div>
         <div className="sm:flex gap-1 hidden sm:gap-6">
-          {dropDownMenu("Events & Tickets", nbaDivisionTeams)}
-          {dropDownMenu("Shop", nbaDivisionTeams)}
+          {leftMenu("Events & Tickets", nbaDivisionTeams)}
+          {leftMenu("Shop", nbaDivisionTeams)}
         </div>
       </div>
     </>

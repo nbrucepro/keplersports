@@ -186,7 +186,7 @@ th {
   box-shadow:
     0px 0px 1px 10px white,
     0px 0px 10px 5px rgba(0, 0, 0, 0.9);
-  color: red;
+  color: green;
 }
 
 .matchup-predictor-teams-container::before {
